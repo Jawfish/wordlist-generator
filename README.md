@@ -4,12 +4,12 @@ Generate a list of words that only contain the specified letters from a given di
 
 ## Usage
 
-| Flag               | Default              | Description                                                                                                                                      |
-| ------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `-d, --dictionary` | `dictionary.txt`     | The file containing the words to filter, one per line.                                                                                           |
-| `-l, --letters`    | Required, no default | The characters you want to filter for. Example: `abc` will output words from the dictionary containing some combination of  `a`, `b`, and/or `c` |
-| `-o, --output`     | `output.txt`         | The file to write the words to.                                                                                                                  |
-| `-m, --min-length` | `1`                  | The minimum size of words to filter for.                                                                                                         |
+| Flag | Default              | Description                                                                                                                                      |
+| ---- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `-d` | `dictionary.txt`     | The file containing the words to filter, one per line.                                                                                           |
+| `-l` | Required, no default | The characters you want to filter for. Example: `abc` will output words from the dictionary containing some combination of  `a`, `b`, and/or `c` |
+| `-o` | `output.txt`         | The file to write the words to.                                                                                                                  |
+| `-m` | `1`                  | The minimum size of words to filter for.                                                                                                         |
 
 If you are using this to make a custom dictionary for [MonkeyType](https://monkeytype.com/), do the following on the main page:
 
