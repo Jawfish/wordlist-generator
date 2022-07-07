@@ -1,11 +1,12 @@
+from typing import cast
 import configparser
 
 config = configparser.ConfigParser()
 config.read("config.ini")
-sequence = config["DEFAULT"]["Sequence"]
-input_filename = config["DEFAULT"]["InputFile"]
-output_filename = config["DEFAULT"]["OutputFile"]
-minimum_length = int(config["DEFAULT"]["MinLength"])
+sequence: list[str] = cast(list[str], config["DEFAULT"]["Sequence"])
+input_filename: str = config["DEFAULT"]["InputFile"]
+output_filename: str = config["DEFAULT"]["OutputFile"]
+minimum_length: int = int(config["DEFAULT"]["MinLength"])
 
 # turn words from file into a list
 def get_words_from_file(file_name: str) -> list:
