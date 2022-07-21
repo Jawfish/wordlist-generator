@@ -11,6 +11,8 @@ Generate a list of words that only contain the specified letters from a given di
 | `-o` | `"output.txt"`         | The file to write the words to.                                                                                                                  |
 | `-m` | `1`                  | The minimum size of words to filter for.                                                                                                         |
 
+Example: `wordlist-generator-win.exe -d "words.txt" -o "save.txt" -l aeioubcd -m 4`
+
 If you are using this to make a custom dictionary for [MonkeyType](https://monkeytype.com/), do the following on the main page:
 
 1. Click `custom` in the top right
