@@ -44,7 +44,9 @@ fn main() {
         writeln!(file, "{}", word).unwrap();
     }
 }
-
+/// Reads lines of a file and returns an iterator over those lines.
+///
+/// * `filename` - The path to the file to read.
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
 where
     P: AsRef<Path>,
@@ -53,6 +55,17 @@ where
     Ok(io::BufReader::new(file).lines())
 }
 
+/// Returns true if the letters in the given word exist in the letters in the given letters string.
+///
+/// # Examples:
+/// ```
+/// word_made_of_letters("hello", "helo") // returns true.
+/// word_made_of_letters("hello", "helow") // returns true.
+/// word_made_of_letters("hello", "elo") // returns false.
+/// ```
+///
+/// * `word` - The word to check.
+/// * `letters` - The letters to check against.
 fn word_made_of_letters(word: &str, letters: &str) -> bool {
     for letter in word.chars() {
         if !letters.contains(letter) {
